@@ -8,6 +8,8 @@ class Pokemon
     @id = id
     @db = db
 
+  end
+
 
 
 
