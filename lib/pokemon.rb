@@ -14,8 +14,8 @@ class Pokemon
   end
 
   def self.find(id)
-    df.execute("SELECT * FROM pokemon WHERE id = ?", id)
-
+    result = df.execute("SELECT * FROM pokemon WHERE id = ?", id)[0]
+    Pokemon.new(result[0], result[1], result[2])
   end
 
 end
